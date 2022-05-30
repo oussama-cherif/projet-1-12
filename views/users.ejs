@@ -1,5 +1,17 @@
 <%- include('./partials/header.ejs') %>
 <div class="container">
+  <div>
+    <form action="/users/add" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" name="username" required>
+      <label for="email">Email:</label>
+      <input type="text" name="email" required>
+      <label for="age">Age:</label>
+      <input type="text" name="age" required>
+      <button>Submit</button>
+    </form>
+  </div>
+  <div>
   <% if(users) { %>
     <% users.forEach( user => { %>
       <h2> <%= user.username %> </h2>
@@ -7,5 +19,6 @@
       <a href="/users/<%= user._id %>"> details</a>
     <% }) %>
   <%}%>
+  </div>
 </div>
 <%- include('./partials/footer.ejs') %>

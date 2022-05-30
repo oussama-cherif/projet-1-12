@@ -27,7 +27,7 @@ const addUser = async(req, res) => {
       email,
       age
     })
-    console.log(user)
+    res.redirect('back');
   } catch(err) {  
     console.log(err.message)
   }
