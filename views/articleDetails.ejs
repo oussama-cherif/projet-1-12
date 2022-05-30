@@ -1,0 +1,9 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+  <% if(article) { %>
+      <h2> <%= article.title %> </h2>
+      <p> <%= article.description %> </p>
+      <p> <%= article.user.username %> </p>
+  <%}%>
+</div>
+<%- include('./partials/footer.ejs') %>

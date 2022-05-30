@@ -1,0 +1,11 @@
+<%- include('./partials/header.ejs') %>
+<div class="container">
+  <% if(users) { %>
+    <% users.forEach( user => { %>
+      <h2> <%= user.username %> </h2>
+      <p> <%= user.age %> </p>
+      <a href="/users/<%= user._id %>"> details</a>
+    <% }) %>
+  <%}%>
+</div>
+<%- include('./partials/footer.ejs') %>
